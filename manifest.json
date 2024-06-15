@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+  "name": "Auto Click Button",
+  "version": "1.0",
+  "description": "Automatically clicks the continue generating button for chatGPT.",
+  "icons": {
+    "16": "extensionLogo.png",
+    "48": "extensionLogo.png",
+    "128": "extensionLogo.png"
+  },
+  "browser_action": {
+    "default_icon": "extensionLogo.png"
+  },
+  "permissions": [
+    "activeTab",
+    "webNavigation"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "support@backus.agency"
+    }
+  }
+}
